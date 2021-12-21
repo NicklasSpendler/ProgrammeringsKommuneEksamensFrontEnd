@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <section class="topPanel">
+            <div class="searchPanel">
+                <input type="text" placeholder="Indtast navn, parti navn, Stemmer" class="searchInput">
+            </div>
+            <div class="createPanel">
+                <a class="procentalLink" href="percentage.html">Procental</a>
+                <button class="openCandidateWindow">Opret Kandidat</button>
+                <!--
+                <button class="openCreatePartiWindow">Opret Parti</button>
+                -->
+            </div>
+        </section>
+
+        <section class="dataTable">
+            <div class="table__header">
+                <div class="table__field header__field header__name">
+                    <p>Kandidat Navn</p>
+                </div>
+                <div class="table__field header__field header__partyName">
+                    <p>Parti Navn</p>
+                </div>
+                <div class="table__field header__field header__antalStemmer">
+                    <p>Antal Stemmer</p>
+                </div>
+                <div class="table__field header__field header__controlPanel">
+                    <p>Kontrol Panel</p>
+                </div>
+            </div>
+            <div class="table__content">
+
+            </div>
+        </section>
+        <!-- Clone Node -->
+        <div class="table__item cloneNode__tableItem hidden">
+            <div class="table__field item__candidateName">
+                <p>[[item__candidateName]]</p>
+            </div>
+            <div class="table__field item__partyName">
+                <p>[[item__partyName]]</p>
+            </div>
+            <div class="table__field item__amountOfVotes">
+                <p>[[item__amountOfVotes]]</p>
+            </div>
+            <div class="table__field item__controlPanel">
+                <a id="" class="table__field item__edit">Edit</a>
+                <a class="table__field item__delete">Delete</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="opacityWindow">
+
+    </div>
+
+    <div class="createCandidateBox">
+        <div class="boxTop">
+            <span class="boxClose">&#10799;</span>
+        </div>
+        <p style="padding-top: 1rem">Opret Kandidat</p>
+        <form class="addCandidateForm" method="POST" action="http://localhost:8080/candidate">
+            <label for="candidateName">Kandidats Navn</label>
+            <input name="candidateName" class="addCandidateBox" type="text" id="candidateName">
+
+            <label for="amountOfVotes">Antal Stemmer</label>
+            <input name="amountOfVotes" class="addCandidateBox" type="text" id="amountOfVotes">
+
+            <label for="sltParti">Vælg Parti</label>
+            <select name="partyID" id="sltParti"></select>
+
+            <button class="formSubmit" type="submit">Opret</button>
+        </form>
+    </div>
+
+    <!--
+    <div class="createPartyBox">
+        <div class="boxTop">
+            <span class="boxClose">&#10799;</span>
+        </div>
+        <p>Opret Parti</p>
+        <form class="addParty" method="POST" action="http://localhost:8080/politicalParty">
+            <label for="party_name">Partiets Navn</label>
+            <input name="partyName" type="text" id="party_name">
+
+            <button class="formSubmit" type="submit">Opret</button>
+        </form>
+    </div>
+    -->
+
+</body>
+<script src="party.js"></script>
+</html>

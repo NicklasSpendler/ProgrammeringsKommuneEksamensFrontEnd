@@ -1,0 +1,25 @@
+.wrapper {
+    padding: 0 22%;
+}
+input {
+    display: block;
+}
+
+#frmEditCandidate{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+#frmEditCandidate input{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.backBtn{
+    color: black;
+    text-decoration: none;
+}

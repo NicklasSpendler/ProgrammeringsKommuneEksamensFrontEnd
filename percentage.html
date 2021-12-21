@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="percentage.css">
+</head>
+<body>
+    <div class="wrapper">
+        <a class="tilbageKnap" href="index.html">Tilbage</a>
+        <section class="dataTable">
+            <div class="table__header">
+                <div class="table__field header__name">
+                    <p>Parti Navn</p>
+                </div>
+                <div class="table__field header__partyName">
+                    <p>Antal Stemmer</p>
+                </div>
+                <div class="table__field header__antalStemmer">
+                    <p>Procent</p>
+                </div>
+            </div>
+            <div class="table__content">
+
+            </div>
+        </section>
+        
+    </div>
+    </div>
+
+    <!-- Clone Node -->
+    <div class="table__item cloneNode__tableItem hidden">
+        <div class="table__field item__partyName">
+            <p>[[party__name]]</p>
+        </div>
+        <div class="table__field item__amountOfVotes">
+            <p>[[party__votes]]</p>
+        </div>
+        <div class="table__field item__percentage">
+            <p>[[party__procentage]]</p>
+        </div>
+    </div>
+</body>
+<script src="percentage.js"></script>
+</html>
